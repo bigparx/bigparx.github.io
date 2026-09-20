@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>史大奈-大唐名将传奇与历史人物百科</title>
+    <meta name="description" content="史大奈，隋唐时期著名将领，突厥启民可汗之子。本站详细收录史大奈生平事迹、从突厥归唐的传奇经历、平定天下的战功以及他在隋唐演义中的形象分析。">
+    <meta name="keywords" content="史大奈, 隋唐名将, 突厥, 启民可汗, 历史人物, 隋唐演义">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* 鞍褐色 */
+            --secondary-color: #D2B48C; /* 棕褐色 */
+            --accent-color: #C0392B; /* 朱砂红 */
+            --bg-color: #F9F7F2; /* 宣纸白 */
+            --text-main: #2C2C2C;
+            --text-light: #666;
+            --card-bg: #FFFFFF;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            font-weight: normal;
+            font-size: 1rem;
+            border-left: 1px solid #ccc;
+            padding-left: 0.5rem;
+            margin-left: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/history/1600/600') center/cover no-repeat;
+            color: #fff;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #6d360e;
+            transform: translateY(-2px);
+        }
+
+        /* 内容区块通用样式 */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        /* 生平简介 */
+        .biography-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .biography-text p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .biography-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* 画像卡片 */
+        .portrait-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .portrait-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .portrait-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .portrait-img {
+            height: 200px;
+            background-color: #eee;
+            overflow: hidden;
+        }
+        
+        .portrait-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .portrait-info {
+            padding: 1.5rem;
+        }
+
+        .portrait-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portrait-info .tag {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #333;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .portrait-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 战功列表 */
+        .achievements {
+            background-color: #fff;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            background-color: var(--primary-color);
+            border: 4px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+
+        .timeline-year {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-desc {
+            color: var(--text-light);
+        }
+
+        /* 评价与轶事 */
+        .quote-box {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-box blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-box cite {
+            font-style: normal;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* 常见问题 */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #aaa;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .biography-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-item {
+                padding-left: 45px;
+            }
+
+            .timeline-item::before {
+                left: 6px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">历史人物志 <span>Shi Danai</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#bio" class="active">生平简介</a></li>
+                    <li><a href="#portrait">历史画像</a></li>
+                    <li><a href="#achievements">主要战功</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>史大奈</h1>
+                <p>突厥启民可汗之子，归唐名将。以勇武善战闻名，随秦王李世民平定四方，为大唐基业立下赫赫战功。</p>
+                <a href="#bio" class="btn">阅读生平</a>
+            </div>
+        </section>
+
+        <!-- 生平简介 -->
+        <section id="bio">
+            <div class="container">
+                <div class="section-header">
+                    <h2>生平简介</h2>
+                    <p>从草原游牧到中原霸业，一位杰出的军事家</p>
+                </div>
+                <div class="biography-content">
+                    <div class="biography-text">
+                        <p><strong>史大奈</strong>（约公元6世纪末—7世纪初），突厥启民可汗之子。其家族背景显赫，母亲是大隋义成公主，这使得史大奈自幼便在隋朝与突厥的交界地带成长，深受两种文化的熏陶。</p>
+                        <p>史大奈早年随父朝贡于隋朝，展现了卓越的骑射才能和领导力。大业年间，他协助启民可汗镇守北方边境，为隋朝的稳定做出了贡献。隋末天下大乱，突厥势力趁机南下，史大奈审时度势，毅然决定归顺新兴的唐朝。</p>
+                        <p>归唐后，史大奈深受唐高祖李渊和唐太宗李世民的赏识。他不仅凭借自身的军事才能屡立战功，更因其特殊的民族身份，成为了唐廷联络突厥各部的重要桥梁。他在平定王世充、窦建德等割据势力的战役中发挥了关键作用，被封为定襄郡公。</p>
+                    </div>
+                    <div class="biography-image">
+                        <img src="https://picsum.photos/seed/shidanai/600/400" alt="史大奈人物画像示意">
+                        <div style="margin-top: 1rem; font-size: 0.9rem; color: #666; font-style: italic;">（注：此图为示意，史大奈具体画像已佚）</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 历史画像 -->
+        <section id="portrait">
+            <div class="container">
+                <div class="section-header">
+                    <h2>历史画像与形象</h2>
+                    <p>关于史大奈的史料记载与后世演绎</p>
+                </div>
+                <div class="portrait-grid">
+                    <article class="portrait-card">
+                        <div class="portrait-img">
+                            <img src="https://picsum.photos/seed/general1/400/300" alt="隋唐名将形象">
+                        </div>
+                        <div class="portrait-info">
+                            <span class="tag">正史记载</span>
+                            <h3>勇冠三军</h3>
+                            <p>《旧唐书》与《新唐书》均记载史大奈“善骑射，骁勇有谋略”。在战场上，他常身先士卒，冲锋陷阵，是李世民麾下最倚重的将领之一。</p>
+                        </div>
+                    </article>
+
+                    <article class="portrait-card">
+                        <div class="portrait-img">
+                            <img src="https://picsum.photos/seed/general2/400/300" alt="突厥骑兵形象">
+                        </div>
+                        <div class="portrait-info">
+                            <span class="tag">民族融合</span>
+                            <h3>突厥贵胄</h3>
+                            <p>作为启民可汗之子，史大奈保留了草原民族的彪悍气质。他在军中推行汉法，同时保留突厥习俗，是唐代民族融合的典型代表。</p>
+                        </div>
+                    </article>
+
+                    <article class="portrait-card">
+                        <div class="portrait-img">
+                            <img src="https://picsum.photos/seed/general3/400/300" alt="唐朝宫廷形象">
+                        </div>
+                        <div class="portrait-info">
+                            <span class="tag">演义演绎</span>
+                            <h3>隋唐演义</h3>
+                            <p>在《隋唐演义》等民间文学中，史大奈被塑造成一位面如满月、武艺高强的猛将，常与秦琼、尉迟恭等名将并驾齐驱，深受读者喜爱。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主要战功 -->
+        <section id="achievements" class="achievements">
+            <div class="container">
+                <div class="section-header">
+                    <h2>主要战功</h2>
+                    <p>从太原起兵到大唐统一战争中的关键贡献</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">公元617年</div>
+                        <h3 class="timeline-title">随军入关</h3>
+                        <p class="timeline-desc">协助秦王李世民攻克长安，为唐朝的建立奠定了基础。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">公元620年</div>
+                        <h3 class="timeline-title">平定郑国</h3>
+                        <p class="timeline-desc">在虎牢关之战中，随李世民围攻王世充，立下汗马功劳。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">公元621年</div>
+                        <h3 class="timeline-title">擒拿窦建德</h3>
+                        <p class="timeline-desc">参与围剿河北窦建德势力，辅助李世民取得决定性胜利。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">公元626年</div>
+                        <h3 class="timeline-title">玄武门之变</h3>
+                        <p class="timeline-desc">在关键时刻支持李世民，为夺取皇位发挥了重要作用。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">晚年</div>
+                        <h3 class="timeline-title">镇守边疆</h3>
+                        <p class="timeline-desc">受封定襄郡公，继续在北方边境防御突厥，保障边境安宁。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 评价与轶事 -->
+        <section>
+            <div class="container">
+                <div class="quote-box">
+                    <blockquote>
+                        “史大奈以突厥之身，归唐为臣，忠勇双全，实乃大唐之柱石。”
+                    </blockquote>
+                    <cite>—— 史料评述</cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问答 -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问答</h2>
+                    <p>关于史大奈的补充信息</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>史大奈的父亲是谁？</h3>
+                        <p>史大奈的父亲是突厥启民可汗，母亲是隋朝义成公主。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>史大奈的封号是什么？</h3>
+                        <p>史大奈在唐朝被赐封为定襄郡公，死后被追赠为左卫大将军。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>史大奈在《隋唐演义》里的地位如何？</h3>
+                        <p>在民间评书和小说中，他通常被描绘为排名靠前的十八好汉之一，是一位以勇猛著称的猛将。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>史大奈对唐朝有什么特殊贡献？</h3>
+                        <p>除了军事上的功绩，他作为启民可汗之子，在唐朝与突厥的外交关系中也扮演了独特的桥梁角色，有助于缓和边境冲突。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>历史人物志</h4>
+                    <p>致力于传播真实的历史知识与人物故事，还原历史的本来面目。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">唐朝历史</a></li>
+                        <li><a href="#">突厥汗国</a></li>
+                        <li><a href="#">秦王李世民</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <ul>
+                        <li><a href="#">使用指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 历史人物志 - 史大奈专题页. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
