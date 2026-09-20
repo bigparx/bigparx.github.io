@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一元一次方程应用题归类详解，涵盖行程问题、工程问题、利润率问题、浓度问题、销售问题及数字问题。提供典型例题、解题思路与步骤解析，助您轻松掌握一元一次方程的应用技巧。">
+    <meta name="keywords" content="一元一次方程应用题归类,行程问题,工程问题,利润问题,浓度问题,数学解题方法">
+    <title>一元一次方程应用题归类-典型题型解析与解题思路</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+            --border-radius: 8px;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 2rem;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            padding-bottom: 4rem;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Category Cards */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-header {
+            padding: 1.5rem;
+            background-color: #f1f5f9;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .card-header h3 {
+            font-size: 1.25rem;
+            color: var(--text-main);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-body p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .card-footer {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            background-color: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-widget h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .step-list {
+            list-style: none;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .step-list li::before {
+            content: attr(data-step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 1.2rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .example-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .example-box strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 3rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h5 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .step-list li {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">数理<span>解密</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">应用题归类</a></li>
+                    <li><a href="#">知识点汇总</a></li>
+                    <li><a href="#">解题技巧</a></li>
+                    <li><a href="#">错题集</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>一元一次方程应用题归类</h1>
+        <p>系统梳理典型题型，掌握核心解题模型，从“设而不求”到“整体代入”，提升数学解题效率。</p>
+    </section>
+
+    <main class="container">
+        <section class="content-area">
+            <div class="section-title">
+                <span>常见题型分类</span>
+                <span style="font-size: 1rem; color: var(--text-secondary); font-weight: normal;">共 6 大核心模块</span>
+            </div>
+            
+            <div class="category-grid">
+                <!-- Card 1: 行程问题 -->
+                <article class="card">
+                    <div class="card-header">
+                        <h3>🚗 行程问题</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>核心公式：路程 = 速度 × 时间。重点在于分析运动状态（相遇、追及、环形跑道）。</p>
+                        <div class="example-box">
+                            <strong>典型场景：</strong>
+                            相遇问题（两人相向而行）、追及问题（两人同向而行）、流水行船。
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">查看详解 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 2: 工程问题 -->
+                <article class="card">
+                    <div class="card-header">
+                        <h3>⚙️ 工程问题</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>核心公式：工作总量 = 效率 × 时间。通常将工作总量看作“1”或“单位总量”。</p>
+                        <div class="example-box">
+                            <strong>典型场景：</strong>
+                            合作完成工程、单独完成工程、分段完成工程。
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">查看详解 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 3: 利润问题 -->
+                <article class="card">
+                    <div class="card-header">
+                        <h3>💰 利润与销售</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>核心公式：利润 = 售价 - 进价。涉及利润率、折扣、二次销售等问题。</p>
+                        <div class="example-box">
+                            <strong>典型场景：</strong>
+                            进价售价计算、打折促销、利润最大化策略。
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">查看详解 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 4: 浓度问题 -->
+                <article class="card">
+                    <div class="card-header">
+                        <h3>⚗️ 浓度问题</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>核心公式：溶质 = 溶液 × 浓度。关键在于理解“蒸发”、“稀释”、“混合”过程中的溶质守恒。</p>
+                        <div class="example-box">
+                            <strong>典型场景：</strong>
+                            混合溶液、加水/加盐、酒精挥发。
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">查看详解 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 5: 销售问题 -->
+                <article class="card">
+                    <div class="card-header">
+                        <h3>📦 销售问题</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>与利润问题紧密相关，侧重于销售数量、单价与总收入之间的关系。</p>
+                        <div class="example-box">
+                            <strong>典型场景：</strong>
+                            进货成本核算、销售策略制定、盈亏平衡点。
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">查看详解 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 6: 数字问题 -->
+                <article class="card">
+                    <div class="card-header">
+                        <h3>🔢 数字问题</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>利用数位关系列式。重点是将抽象的数字转化为代数式，如“十位数字x，个位数字y”。</p>
+                        <div class="example-box">
+                            <strong>典型场景：</strong>
+                            整数拆分、数位规律、多位数比较大小。
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">查看详解 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-title" style="margin-top: 3rem;">
+                <span>综合应用与技巧</span>
+            </div>
+            <article class="card">
+                <div class="card-header">
+                    <h3>💡 统一单位与整体代入法</h3>
+                </div>
+                <div class="card-body">
+                    <p>在解决复杂的应用题时，首先必须确保题目中的单位统一（如时间统一为小时，长度统一为米）。对于涉及多个量且关系复杂的题目，可以尝试<strong>整体代入法</strong>，即设间接未知数或利用总量关系直接求解，避免繁琐的消元过程。</p>
+                    <br>
+                    <p><strong>常见陷阱：</strong> 容易忽略“单位1”的变化（如百分数与分数的混淆），或混淆“增加a%”与“增加到a%”的区别。</p>
+                </div>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h4>📝 解题五步法</h4>
+                <ol class="step-list">
+                    <li data-step="1">审题：圈画关键词，明确已知量和未知量。</li>
+                    <li data-step="2">设元：设直接元或间接元，列出方程。</li>
+                    <li data-step="3">列式：根据等量关系，将文字语言转化为代数式。</li>
+                    <li data-step="4">求解：解方程，并检验解的合理性（如时间不能为负）。</li>
+                    <li data-step="5">答：写出完整的答案，包括单位。</li>
+                </ol>
+            </div>
+
+            <div class="sidebar-widget">
+                <h4>🚀 热门考点</h4>
+                <ul class="step-list">
+                    <li><a href="#">二元一次方程组消元法</a></li>
+                    <li><a href="#">分式方程的增根问题</a></li>
+                    <li><a href="#">不等式组的应用</a></li>
+                    <li><a href="#">动点问题分析</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h5>关于本站</h5>
+                <p>专注于数学解题思路的整理与分享，旨在帮助初中生及数学爱好者构建清晰的解题思维模型。</p>
+            </div>
+            <div class="footer-col">
+                <h5>快速链接</h5>
+                <ul>
+                    <li><a href="#">一元一次方程基础</a></li>
+                    <li><a href="#">二元一次方程组</a></li>
+                    <li><a href="#">分式方程</a></li>
+                    <li><a href="#">不等式与不等式组</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>联系方式</h5>
+                <ul>
+                    <li><a href="#">投稿建议</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">免责声明</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem; border-top: 1px solid #334155; padding-top: 1rem; font-size: 0.9rem;">
+            &copy; 2023 数理解密 - 一元一次方程应用题归类资源站
+        </div>
+    </footer>
+
+</body>
+</html>
