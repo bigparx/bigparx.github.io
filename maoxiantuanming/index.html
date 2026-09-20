@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒险团名字 - 游戏公会命名灵感库与起名工具</title>
+    <meta name="description" content="为您提供海量游戏冒险团名字、公会名称、战队ID及霸气团队名。包含古风、现代、搞笑、可爱等多种风格分类，助您在游戏中脱颖而出，打造独一无二的冒险团品牌。">
+    <meta name="keywords" content="冒险团名字,公会名字,战队ID,团队名称,游戏起名">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #fd79a8;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-sub);
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background: #5649c0;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 24px;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            outline: none;
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Filter Tags */
+        .filters {
+            max-width: var(--container-width);
+            margin: -30px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .filter-list {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .filter-tag {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #f1f2f6;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .filter-tag:hover {
+            background: #e1e2e6;
+        }
+
+        .filter-tag.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Content Grid */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .names-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .name-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .name-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--secondary-color);
+        }
+
+        .name-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .name-card:hover::before {
+            opacity: 1;
+        }
+
+        .name-content {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            word-break: break-all;
+            font-family: 'KaiTi', 'SimKai', serif; /* 书法风格字体优先 */
+        }
+
+        .name-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 4px;
+            background: #f1f2f6;
+            color: var(--text-sub);
+        }
+
+        .tag.style { background: #e3f2fd; color: #1976d2; }
+        .tag.vibe { background: #fce4ec; color: #c2185b; }
+        .tag.type { background: #e8f5e9; color: #388e3c; }
+
+        .copy-btn {
+            margin-top: 15px;
+            width: 100%;
+            padding: 8px;
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .copy-btn.copied {
+            background: #2ecc71;
+            border-color: #2ecc71;
+            color: white;
+        }
+
+        /* Features Section */
+        .features {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .feature-grid {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(108, 92, 231, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .feature-item p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #b2bec3;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid #636e72;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #636e72;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .nav-links { display: none; }
+            .filters { margin-top: 0; }
+            .name-card { padding: 20px; }
+            .name-content { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                冒险团名字<span>库</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#style">风格分类</a>
+                <a href="#guide">起名指南</a>
+                <a href="#about">关于我们</a>
+            </nav>
+            <a href="#" class="cta-btn">生成名字</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>寻找属于你的专属冒险团</h1>
+        <p>无论是热血战斗、休闲冒险还是史诗探索，这里汇聚了数万款创意游戏公会名称，助你组建最强战队。</p>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="输入游戏名称或关键词，如：龙、战、影...">
+            <button class="search-btn">🔍</button>
+        </div>
+    </section>
+
+    <div class="filters">
+        <div class="filter-list">
+            <span class="filter-tag active" data-filter="all">全部</span>
+            <span class="filter-tag" data-filter="cool">霸气侧漏</span>
+            <span class="filter-tag" data-filter="ancient">古风雅韵</span>
+            <span class="filter-tag" data-filter="funny">幽默搞怪</span>
+            <span class="filter-tag" data-filter="english">英文ID</span>
+            <span class="filter-tag" data-filter="literary">文艺清新</span>
+            <span class="filter-tag" data-filter="dark">暗黑神秘</span>
+        </div>
+    </div>
+
+    <main class="container" id="style">
+        <h2 class="section-title">热门推荐</h2>
+        <div class="names-grid">
+            
+            <!-- Card 1 -->
+            <article class="name-card" data-category="cool">
+                <div class="name-content">斩星逐月</div>
+                <div class="name-tags">
+                    <span class="tag style">霸气</span>
+                    <span class="tag type">战斗</span>
+                </div>
+                <button class="copy-btn" onclick="copyText(this)">复制名字</button>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="name-card" data-category="ancient">
+                <div class="name-content">扶摇九万里</div>
+                <div class="name-tags">
+                    <span class="tag style">古风</span>
+                    <span class="tag type">仙侠</span>
+                </div>
+                <button class="copy-btn" onclick="copyText(this)">复制名字</button>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="name-card" data-category="funny">
+                <div class="name-content">这就是命</div>
+                <div class="name-tags">
+                    <span class="tag style">搞笑</span>
+                    <span class="tag type">休闲</span>
+                </div>
+                <button class="copy-btn" onclick="copyText(this)">复制名字</button>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="name-card" data-category="dark">
+                <div class="name-content">永夜之殇</div>
+                <div class="name-tags">
+                    <span class="tag style">暗黑</span>
+                    <span class="tag type">RPG</span>
+                </div>
+                <button class="copy-btn" onclick="copyText(this)">复制名字</button>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="name-card" data-category="cool">
+                <div class="name-content">暴风战纪</div>
+                <div class="name-tags">
+                    <span class="tag style">霸气</span>
+                    <span class="tag type">竞技</span>
+                </div>
+                <button class="copy-btn" onclick="copyText(this)">复制名字</button>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="name-card" data-category="literary">
+                <div class="name-content">半城烟沙</div>
+                <div class="name-tags">
+                    <span class="tag style">古风</span>
+                    <span class="tag type">唯美</span>
+                </div>
+                <button class="copy-btn" onclick="copyText(this)">复制名字</button>
+            </article>
+
+            <!-- Card 7 -->
+            <article class="name-card" data-category="english">
+                <div class="name-content">Eternal Glory</div>
+                <div class="name-tags">
+                    <span class="tag style">英文</span>
+                    <span class="tag type">史诗</span>
+                </div>
+                <button class="copy-btn" onclick="copyText(this)">复制名字</button>
+            </article>
+
+             <!-- Card 8 -->
+             <article class="name-card" data-category="cool">
+                <div class="name-content">狂龙啸天</div>
+                <div class="name-tags">
+                    <span class="tag style">霸气</span>
+                    <span class="tag type">东方</span>
+                </div>
+                <button class="copy-btn" onclick="copyText(this)">复制名字</button>
+            </article>
+
+        </div>
+    </main>
+
+    <section class="features" id="guide">
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">✨</div>
+                <h3>海量分类</h3>
+                <p>涵盖古风、现代、英文、暗黑等多种风格，满足不同游戏类型的命名需求。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h3>一键复制</h3>
+                <p>无需手动选择，点击按钮即可快速复制名字，省去繁琐步骤，提升效率。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎨</div>
+                <h3>创意无限</h3>
+                <p>灵感源自经典文学与游戏文化，确保每个名字都独一无二，拒绝撞名。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="about">
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 15px; color: white;">
+                    冒险团名字<span>库</span>
+                </div>
+                <p style="color: #b2bec3; font-size: 0.9rem;">专注于为游戏玩家提供高质量、有创意的公会与团队命名服务。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">霸气名字</a></li>
+                    <li><a href="#">古风名字</a></li>
+                    <li><a href="#">搞笑名字</a></li>
+                    <li><a href="#">英文ID</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>使用帮助</h4>
+                <ul>
+                    <li><a href="#">命名规范</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 冒险团名字库. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的复制功能
+        function copyText(btn) {
+            const text = btn.parentElement.querySelector('.name-content').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = '已复制！';
+                btn.classList.add('copied');
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('复制失败:', err);
+                // 降级处理
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                
+                const originalText = btn.innerText;
+                btn.innerText = '已复制！';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // 筛选功能
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const cards = document.querySelectorAll('.name-card');
+
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                // 移除所有激活状态
+                filterTags.forEach(t => t.classList.remove('active'));
+                // 激活当前标签
+                tag.classList.add('active');
+
+                const filterValue = tag.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        // 添加简单的淡入动画
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.opacity = '1', 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
