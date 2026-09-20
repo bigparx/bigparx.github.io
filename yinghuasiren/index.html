@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="樱花私人影院提供高清正版免费在线观看服务，涵盖最新电影、热门电视剧及经典动漫资源，无需下载，即点即看。">
+    <meta name="keywords" content="樱花私人影院 免费,樱花影院,免费电影,在线观看,高清影视">
+    <title>樱花私人影院 免费 - 高清正版在线影视资源与观看指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --primary-hover: #ff6b81;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-sub: #57606f;
+            --border-radius: 12px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 8px;
+        }
+
+        .search-box input {
+            padding: 8px 12px;
+            border: 1px solid #dfe4ea;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        .search-box button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+            color: white;
+            padding: 40px var(--spacing-unit);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit) 40px;
+            flex: 1;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 24px;
+        }
+
+        /* Content Section */
+        .section-title {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .movie-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .poster {
+            width: 100%;
+            height: 260px;
+            background-color: #dfe4ea;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .badge-free {
+            background-color: #2ed573;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #f1f2f6;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .notice-list {
+            list-style: none;
+        }
+
+        .notice-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f2f6;
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .notice-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2f3542;
+            color: #a4b0be;
+            padding: 40px var(--spacing-unit);
+            margin-top: auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #a4b0be;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                display: none; /* Simplify for mobile */
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+                </svg>
+                樱花私人影院 <span>免费</span>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">高分榜单</a></li>
+                    <li><a href="#">分类浏览</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" placeholder="搜索片名...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>高清免费，畅享视界</h1>
+        <p>汇聚全网最新电影、电视剧、动漫资源，提供高清流畅的在线播放体验，无广告打扰。</p>
+    </section>
+
+    <main class="container">
+        <!-- Main Content Area -->
+        <section>
+            <div class="section-title">
+                <h2>今日推荐</h2>
+                <a href="#" style="font-size:0.9rem; color:var(--primary-color); text-decoration:none;">查看更多 &gt;</a>
+            </div>
+            
+            <div class="movie-grid">
+                <!-- Movie Card 1 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie1/300/400" alt="电影海报" class="poster">
+                    <div class="card-info">
+                        <h3 class="card-title">星际穿越：重启版</h3>
+                        <div class="card-meta">
+                            <span class="badge-free">免费</span>
+                            <span>科幻 / 冒险</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Card 2 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie2/300/400" alt="电影海报" class="poster">
+                    <div class="card-info">
+                        <h3 class="card-title">都市夜归人</h3>
+                        <div class="card-meta">
+                            <span class="badge-free">免费</span>
+                            <span>剧情 / 悬疑</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Card 3 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie3/300/400" alt="电影海报" class="poster">
+                    <div class="card-info">
+                        <h3 class="card-title">深海探险记</h3>
+                        <div class="card-meta">
+                            <span class="badge-free">免费</span>
+                            <span>动画 / 冒险</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Card 4 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie4/300/400" alt="电影海报" class="poster">
+                    <div class="card-info">
+                        <h3 class="card-title">极速风暴</h3>
+                        <div class="card-meta">
+                            <span class="badge-free">免费</span>
+                            <span>动作 / 犯罪</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Card 5 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie5/300/400" alt="电影海报" class="poster">
+                    <div class="card-info">
+                        <h3 class="card-title">甜蜜时光</h3>
+                        <div class="card-meta">
+                            <span class="badge-free">免费</span>
+                            <span>爱情 / 喜剧</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Card 6 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie6/300/400" alt="电影海报" class="poster">
+                    <div class="card-info">
+                        <h3 class="card-title">历史的回响</h3>
+                        <div class="card-meta">
+                            <span class="badge-free">免费</span>
+                            <span>纪录片</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-title" style="margin-top: 32px;">
+                <h2>最新收录</h2>
+            </div>
+            
+            <div class="movie-grid">
+                <!-- More Movie Cards -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie7/300/400" alt="电影海报" class="poster">
+                    <div class="card-info">
+                        <h3 class="card-title">未来之城</h3>
+                        <div class="card-meta">
+                            <span class="badge-free">免费</span>
+                            <span>科幻</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie8/300/400" alt="电影海报" class="poster">
+                    <div class="card-info">
+                        <h3 class="card-title">无声的证言</h3>
+                        <div class="card-meta">
+                            <span class="badge-free">免费</span>
+                            <span>律政</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie9/300/400" alt="电影海报" class="poster">
+                    <div class="card-info">
+                        <h3 class="card-title">追逐梦想</h3>
+                        <div class="card-meta">
+                            <span class="badge-free">免费</span>
+                            <span>体育</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sidebar Area -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3 style="margin-bottom:12px;">热门标签</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">动作片</a>
+                    <a href="#" class="tag">喜剧</a>
+                    <a href="#" class="tag">爱情</a>
+                    <a href="#" class="tag">科幻</a>
+                    <a href="#" class="tag">悬疑</a>
+                    <a href="#" class="tag">恐怖</a>
+                    <a href="#" class="tag">动漫</a>
+                    <a href="#" class="tag">纪录片</a>
+                    <a href="#" class="tag">4K</a>
+                    <a href="#" class="tag">免费</a>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 style="margin-bottom:12px;">系统公告</h3>
+                <ul class="notice-list">
+                    <li><span>服务器维护通知</span> <span>10-24</span></li>
+                    <li><span>新增4K资源专区</span> <span>10-22</span></li>
+                    <li><span>会员权益升级公告</span> <span>10-20</span></li>
+                    <li><span>关于版权声明的更新</span> <span>10-18</span></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 style="margin-bottom:12px;">使用帮助</h3>
+                <p style="font-size:0.9rem; color:var(--text-sub); margin-bottom:8px;">
+                    如何在手机上观看？
+                </p>
+                <p style="font-size:0.9rem; color:var(--text-sub);">
+                    直接点击视频播放器下方的“手机版”链接，即可自动适配移动端界面，享受流畅体验。
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">版权声明</a>
+            <a href="#">联系方式</a>
+            <a href="#">免责声明</a>
+        </div>
+        <p>&copy; 2023 樱花私人影院 免费. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">
+            本站资源均来自互联网，仅供学习交流，请勿用于商业用途。
+        </p>
+    </footer>
+
+</body>
+</html>
