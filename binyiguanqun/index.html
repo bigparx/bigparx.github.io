@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>殡仪馆群发温馨短信 - 专业哀悼信息管理服务平台</title>
+    <meta name="description" content="提供专业的殡仪馆群发温馨短信服务，帮助机构在追思会、告别仪式等关键节点传递深切哀悼与人文关怀，支持批量发送、个性化定制与隐私保护。">
+    <meta name="keywords" content="殡仪馆群发温馨短信,追思会短信,告别仪式通知,殡葬服务短信平台,哀悼信息群发">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #4a6fa5;
+            --accent-color: #8e44ad;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(74, 111, 165, 0.1);
+            color: var(--secondary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #1a252f;
+        }
+
+        /* Features Section */
+        .section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(142, 68, 173, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Use Cases */
+        .bg-light {
+            background-color: #f4f6f8;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .case-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 300px;
+        }
+
+        .case-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+            transition: transform 0.5s;
+        }
+
+        .case-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .case-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            color: white;
+        }
+
+        .case-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .case-content p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Template Section */
+        .templates-section {
+            background-color: var(--card-bg);
+        }
+
+        .template-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .template-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .template-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .template-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .check-icon {
+            color: #27ae60;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .template-code {
+            flex: 1;
+            min-width: 300px;
+            background: #f8f9fa;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+        }
+
+        .template-block {
+            background: white;
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 20px;
+            font-family: monospace;
+            color: #444;
+        }
+
+        .template-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            display: block;
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: var(--container-width);
+            margin: 0 auto 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .template-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>安息云</span>服务
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#features">服务优势</a></li>
+                    <li><a href="#use-cases">应用场景</a></li>
+                    <li><a href="#templates">短信模板</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">获取报价</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>殡仪馆群发温馨短信<br>传递深切哀悼与人文关怀</h1>
+                <div class="hero-tags">
+                    <span class="tag">告别仪式通知</span>
+                    <span class="tag">追思会邀请</span>
+                    <span class="tag">灵车接送提醒</span>
+                    <span class="tag">骨灰安放预约</span>
+                </div>
+                <p>专为殡仪馆、公墓及殡葬服务机构打造的信息化服务平台，支持批量发送、隐私保护及情感化文案定制，让每一次告别都充满尊重。</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="window.location.href='#contact'">立即咨询</button>
+                    <button class="btn-primary" style="background: white; color: var(--primary-color); border: 1px solid #ddd;" onclick="window.location.href='#templates'">查看模板</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>为什么选择我们的短信服务</h2>
+                    <p>我们理解这一行业的特殊性，专注于提供稳定、安全且富有温度的通信解决方案。</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon-box">🛡️</div>
+                        <h3>隐私与安全保护</h3>
+                        <p>严格遵循行业规范，对逝者家属信息进行加密存储，确保敏感数据不泄露，提供合规的发送记录。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">⚡</div>
+                        <h3>高效批量发送</h3>
+                        <p>支持数万条信息并发处理，确保在追悼会开始前或骨灰安放日，信息能准确触达每一位亲友。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">💬</div>
+                        <h3>情感化模板定制</h3>
+                        <p>提供多套符合礼仪规范的温馨文案模板，支持个性化变量替换，让短信不仅是通知，更是慰问。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">📊</div>
+                        <h3>发送状态实时追踪</h3>
+                        <p>详细的发送报表，清晰展示已送达、未送达及失败原因，方便工作人员及时跟进遗漏情况。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">📞</div>
+                        <h3>7x24小时技术支持</h3>
+                        <p>殡葬服务往往涉及突发情况，我们的客服团队随时待命，确保通信系统在关键时刻不掉线。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">📱</div>
+                        <h3>多渠道触达</h3>
+                        <p>不仅支持短信，还可配合微信服务通知，构建全方位的亲友联络体系，提升服务品质。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="use-cases" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>典型应用场景</h2>
+                    <p>从通知到安抚，我们覆盖殡葬服务的全流程沟通需求。</p>
+                </div>
+                <div class="cases-grid">
+                    <div class="case-item">
+                        <img src="https://picsum.photos/seed/funeral1/400/300" alt="告别仪式现场">
+                        <div class="case-content">
+                            <h3>追悼会/告别仪式通知</h3>
+                            <p>精准通知亲友时间、地点及着装建议，减少现场等待与沟通成本。</p>
+                        </div>
+                    </div>
+                    <div class="case-item">
+                        <img src="https://picsum.photos/seed/funeral2/400/300" alt="灵车服务">
+                        <div class="case-content">
+                            <h3>灵车接送时间提醒</h3>
+                            <p>在出殡前发送提醒，避免家属因遗忘时间而延误行程，体现专业细致。</p>
+                        </div>
+                    </div>
+                    <div class="case-item">
+                        <img src="https://picsum.photos/seed/funeral3/400/300" alt="骨灰安放">
+                        <div class="case-content">
+                            <h3>骨灰安放/入塔预约提醒</h3>
+                            <p>告知具体的安放位置及纪念日期，帮助家属铭记，便于日后祭扫。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="templates" class="section templates-section">
+            <div class="container">
+                <div class="template-container">
+                    <div class="template-text">
+                        <h3>专业规范的短信模板</h3>
+                        <ul class="template-list">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>正式通知类</strong><br>
+                                    针对会议时间地点的清晰告知，语气庄重。
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>温馨慰问类</strong><br>
+                                    表达哀思与慰问，给予家属心理支持。
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>服务提醒类</strong><br>
+                                    如火化时间变更、骨灰领取注意事项等。
+                                </div>
+                            </li>
+                        </ul>
+                        <p style="margin-top: 20px; color: var(--text-light);">所有模板均经过严格审核，确保符合社会公序良俗及平台规范。</p>
+                    </div>
+                    <div class="template-code">
+                        <span class="template-label">示例 1：追悼会通知</span>
+                        <div class="template-block">
+【安息云】尊敬的[姓名]先生/女士，兹定于[日期] [时间]在[殡仪馆名称]举行追悼会。地点：[详细地址]。请准时参加。
+                        </div>
+                        <span class="template-label">示例 2：温馨慰问</span>
+                        <div class="template-block">
+【安息云】惊悉[逝者姓名]不幸逝世，我们深感悲痛。谨向您及家人致以最深切的慰问。如有需要，殡仪馆24小时服务热线：400-XXX-XXXX。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于殡仪馆群发温馨短信服务的常见疑问。</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">发送追悼会通知短信是否合规？</div>
+                        <div class="faq-answer">
+                            是的。只要短信内容真实、不包含虚假宣传、不骚扰无关人员，且由服务提供方发送，是合法合规的。我们提供的模板均符合工信部及当地民政部门的相关规范。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何确保亲友能收到短信？</div>
+                        <div class="faq-answer">
+                            我们的短信平台对接三大运营商通道，到达率高达98%以上。同时，我们会提供发送状态列表，您可据此确认哪些亲友已接收，方便后续电话确认。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">可以只发给特定的亲友吗？</div>
+                        <div class="faq-answer">
+                            可以。系统支持导入Excel名单，您可以精准筛选需要通知的人群，例如仅发送给本地亲友或仅发送给已确认出席的嘉宾。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">需要提前多久发送比较合适？</div>
+                        <div class="faq-answer">
+                            建议至少提前3-5天发送通知短信，以便亲友安排时间、交通和出席。对于临时变更，建议在变更发生前1-2天发送提醒。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section" style="text-align: center; background: white;">
+            <div class="container">
+                <h2 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 20px;">开启专业服务</h2>
+                <p style="color: var(--text-light); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    联系我们，获取专属的殡仪馆群发温馨短信解决方案。无论是追悼会通知还是日常业务联络，我们都将为您提供最可靠的技术支持。
+                </p>
+                <div style="display: inline-flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                    <div style="background: #f4f6f8; padding: 20px 40px; border-radius: 8px;">
+                        <strong>咨询热线</strong><br>
+                        400-888-XXXX
+                    </div>
+                    <div style="background: #f4f6f8; padding: 20px 40px; border-radius: 8px;">
+                        <strong>商务合作</strong><br>
+                        service@example.com
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">公司简介</a></li>
+                    <li><a href="#">服务理念</a></li>
+                    <li><a href="#">安全承诺</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>产品服务</h4>
+                <ul>
+                    <li><a href="#">短信群发平台</a></li>
+                    <li><a href="#">通知模板库</a></li>
+                    <li><a href="#">CRM客户管理</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助支持</h4>
+                <ul>
+                    <li><a href="#">使用指南</a></li>
+                    <li><a href="#">发送规则</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <p style="color: #bdc3c7; font-size: 0.9rem;">致力于为殡葬行业提供数字化、人性化的沟通服务。</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 安息云信息服务有限公司 版权所有
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+                                  </html>
